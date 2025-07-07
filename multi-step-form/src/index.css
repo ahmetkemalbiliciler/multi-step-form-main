@@ -40,3 +40,20 @@ body {
     font-family: 'Ubuntu', sans-serif;
     background-color: #f0f0f0;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 15px;
+        overflow-x: hidden;
+    }
+
+    #root {
+        width: 100vw;
+        min-height: 100vh;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-x: hidden;
+    }
+}

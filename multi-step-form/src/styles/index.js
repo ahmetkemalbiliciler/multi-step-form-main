@@ -11,6 +11,13 @@ export const FormContainer = styled(Box)(({ theme }) => ({
     minWidth: '560px',
     padding: theme.spacing(3),
     gap: theme.spacing(3),
+    [theme.breakpoints.down('md')]: {
+        height: 'auto',
+        minWidth: 0,
+        width: '100%',
+        padding: theme.spacing(2),
+        gap: theme.spacing(2),
+    },
 }));
 
 // Form Section - Form bölümleri için
@@ -52,6 +59,13 @@ export const PageContainer = styled(Box)(({ theme }) => ({
     minWidth: '560px',
     padding: theme.spacing(3),
     gap: theme.spacing(3),
+    [theme.breakpoints.down('md')]: {
+        height: 'auto',
+        minWidth: 0,
+        width: '100%',
+        padding: theme.spacing(2),
+        gap: theme.spacing(2),
+    },
 }));
 
 // Flex Container - Genel flex container
@@ -59,6 +73,11 @@ export const FlexContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     gap: theme.spacing(2),
+    [theme.breakpoints.down('md')]: {
+        flexDirection: 'column',
+        alignItems: 'stretch',
+        gap: theme.spacing(1),
+    },
 }));
 
 // Flex End Container - Sağa hizalı flex container
@@ -81,5 +100,3 @@ export const fieldLabelStyle = {
     mb: 1,
     fontWeight: 'medium',
 };
-
-// FormContext için referans: src/context/FormContext.jsx 

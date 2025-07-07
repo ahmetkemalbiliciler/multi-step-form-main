@@ -38,12 +38,12 @@ function PlanPage() {
 
     const handlePlanSelect = (key) => {
         setPlan(key);
-        setAddons([]); 
+        setAddons([]);
     };
 
     const handleBillingToggle = () => {
         setBilling(billing === 'monthly' ? 'yearly' : 'monthly');
-        setAddons([]); 
+        setAddons([]);
     };
 
     return (

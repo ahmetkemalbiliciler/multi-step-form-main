@@ -50,8 +50,30 @@ function AppContent() {
   };
 
   return (
-    <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: "100vh" }} >
-      <Box sx={{ display: 'flex', justifyContent: 'center', backgroundColor: "white", alignItems: 'center', padding: 2, borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+    <Container sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: { xs: 'auto', md: '100vh' },
+      padding: { xs: 0, md: 2 },
+      margin: 0,
+      minWidth: { xs: 0, md: 'auto' },
+      width: { xs: '100vw', md: 'auto' },
+      maxWidth: { xs: '100vw' },
+    }} >
+      <Box sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        alignItems: 'center',
+        padding: { xs: 0, md: 2 },
+        borderRadius: { xs: 0, md: '8px' },
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        width: { xs: '100vw', md: '850px' },
+        minWidth: { xs: '100vw', md: '800px' },
+        maxWidth: { xs: '100vw' }
+      }}>
         <Sidebar currentStep={currentStep} onStepChange={handleStepChange} />
         <Routes>
           {stepRoutes.map(r => (
